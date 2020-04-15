@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
-**PicklistComponent** is a picklist which also displays multiple columns and enables the user to sort them, it supports some basic selection functionality.
+**PicklistComponent** is a multi-select picklist which also displays multiple columns and enables the user to sort them, it supports some basic selection functionality.
 
 ## Dependencies
 

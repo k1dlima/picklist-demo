@@ -1,0 +1,40 @@
+<div class="multiple-select-section">
+    <label *ngIf="headers && headers.length === 2">{{headers[0]}}</label>
+    <div class="multi-select">
+        <div class="ul-header sorted-header">
+            <span *ngFor="let columnName of columnNames" (click)="sortByColumn(columnName.key)">{{columnName.value}}
+                <mat-icon *ngIf="sortedColumnName == columnName.key">{{sortReverse ? 'arrow_drop_down' : 'arrow_drop_up'}}</mat-icon>
+            </span>
+        </div>
+        <div class="scrollable-div" tabindex="-11">
+            <ul>
+                <li #avaliableList *ngFor="let item of available" id={{item.uid}} (click)="toggleAvailable($event, item)">
+                    <span *ngFor="let columnName of columnNames">{{item[columnName.key]}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="btns-section">
+    <button [disabled]="availableMarked.length === 0" (click)="moveRight()" class="material-icons">chevron_right</button>
+    <button [disabled]="selectedMarked.length === 0" (click)="moveLeft()" class="material-icons">chevron_left</button>
+</div>
+<div class="multiple-select-section">
+    <label *ngIf="headers && headers.length === 2">{{headers[1]}}</label>
+    <div class="multi-select">
+        <div class="ul-header">
+            <span *ngFor="let columnName of columnNames">{{columnName.value}}</span>
+        </div>
+        <div class="scrollable-div" tabindex="-12">
+            <ul>
+                <li #selectedList *ngFor="let item of selected" id={{item.uid}} (click)="toggleSelected($event, item)">
+                    <span *ngFor="let columnName of columnNames">{{item[columnName.key]}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="btns-section">
+    <button [disabled]="selectedMarked.length === 0" (click)="shiftUp()" class="material-icons move-btn">arrow_upward</button>
+    <button [disabled]="selectedMarked.length === 0" (click)="shiftDown()" class="material-icons move-btn">arrow_downward</button>
+</div>
