@@ -4,6 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 **PicklistComponent** is a multi-select picklist which also displays multiple columns and enables the user to sort them, it supports some basic selection functionality.
 
+## UI
+
+![Picklist](./screenshot.png?raw=true)
+
 ## Dependencies
 
 Used [Angular Material](https://material.angular.io/components/icon/overview) for Icons.
