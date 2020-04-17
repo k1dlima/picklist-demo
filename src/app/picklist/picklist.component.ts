@@ -12,12 +12,12 @@ import * as _ from 'lodash';
 export class PicklistComponent implements OnInit {
 	public available = [];
 	public selected = [];
-	private availableMarked = [];
-	private selectedMarked = [];
+	public availableMarked = [];
+	public selectedMarked = [];
+	public sortedColumnName = null;
+	public sortReverse = false;
 	private lastAvailableMarked = null;
 	private lastSelectedMarked = null;
-	private sortedColumnName = null;
-	private sortReverse = false;
 	// private shiftAvailable = [];
 	// private shiftSelected = [];
 

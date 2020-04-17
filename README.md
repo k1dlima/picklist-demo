@@ -16,15 +16,15 @@ Used [Angular Material](https://material.angular.io/components/icon/overview) fo
 
 #### @Optional: headers
 
-Default is null. It has to be an array of 2 strings.
-Displayes titles for left and right tables. If null, it will not show.
+Default is null. It must be an array of 2 strings.
+Displays titles for left and right tables. If null, it will not show.
 ```javascript
     [ 'Available', 'Selected' ]
 ```
 
 #### @Required: columnNames
 
-Has to be an array of objects with keys - *key* and *value*.
+Must be an array of objects with keys - *key* and *value*.
 Order of columns will follow the order of the Array.
 ```json
     [
@@ -35,8 +35,8 @@ Order of columns will follow the order of the Array.
 
 ####  @Required: data
 
-Has to be an array of objects with the floowing keys:
-* *uid* - a uniquer identifier.
+Must be an array of objects with the following keys:
+* *uid* - a unique identifier.
 * rest of the keys - *key* mentioned in each of `columnNames` object.
 
 ```json
